@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="15">
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <title>Cotação de Moedas</title>
+</head>
+<body>
+
+
+<div style="max-width:37.5rem; display: flex; flex-direction:column; justify-content:center; align-items: center;padding:1rem;margin: auto;border:0.125rem solid grey;border-radius:0.625rem;box-shadow: 0.313rem 0.313rem #DCDCDC">
+
+    <img style="max-width:10rem;margin-bottom:1rem;" src="{{ url_for('static',filename='images/logo.png') }}" alt="Moedas">
+
+    <div style="display: flex; flex-direction:column; justify-content:center; align-items: center;">
+        <p style="font-size: 1.5rem;font-family: 'Oswald', sans-serif;padding:0;margin-bottom:0;margin-top:0">COTAÇÃO DE MOEDAS - EURO</p>
+        <p style="font-size: 1.2rem;font-family: 'Oswald', sans-serif;padding:0;margin-top:0">{{ eur_usd_hora }}</p>
+    </div>
+
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;">Dólar Americano - USD</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_usd }}</p>
+    </div>
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;">Real Brasileiro - BLR</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_blr }}</p>
+    </div>
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;}">Libra Esterlina - GBP</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_gbp }}</p>
+    </div>
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;">Peso Argentino - ARS</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_ars }}</p>
+    </div>
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;">Iene Japonês - JPY</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_jpy }}</p>
+    </div>
+    <div>
+        <b><p style="font-family: 'Inter', sans-serif;text-align: center;font-size:1rem;">Franco Suíço - CHF</p></b>
+        <p style="font-family: 'Inter', sans-serif;text-align: center;font-size:0.8rem">{{ eur_chf }}</p>
+    </div>
+
+
+    <p style="font-family: 'Inter', sans-serif;text-align: center;font-size: 0.5rem;color:grey">Todos os dados foram reunidos pelo AwesomeAPI e podem ser encontrados em https://docs.awesomeapi.com.br/api-de-moedas.</p>
+
+</div>
+
+</body>
+</html>
